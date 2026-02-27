@@ -1,0 +1,264 @@
+{
+  "date": "2026-02-28",
+  "count": 12,
+  "source_used": "openalex",
+  "latest_updated": true,
+  "papers": [
+    {
+      "title": "A Study on Awareness and Investment Attitude of Young Investors towards Commodity Trading: Evidence from Belagavi City",
+      "authors": [
+        "Raghavendra Talavar",
+        "Dr. Yasmin Begum Nadaf"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18708397",
+      "openalex_url": "https://openalex.org/W7130692309",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“A Study on Awareness and Investment Attitude of Young Investors towards Commodity Trading: Evidence from Belagavi City”展开，主题涉及Commodity、Investment (military)、Business。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Commodity",
+        "Investment (military)",
+        "Business",
+        "Descriptive statistics",
+        "Financial literacy"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Digital Tax Reforms and Economic Governance: Examining GST 2.0 in India",
+      "authors": [
+        "Sunanda Hatti"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18739356",
+      "openalex_url": "https://openalex.org/W7131093385",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Digital Tax Reforms and Economic Governance: Examining GST 2.0 in India”展开，主题涉及Tax reform、Corporate governance、Economics。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Tax reform",
+        "Corporate governance",
+        "Economics",
+        "Tax revenue",
+        "Revenue"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Entrepreneurship and Ecosystem Development: Empirical Evidence from Emerging Business Environments in Belagavi",
+      "authors": [
+        "Nikita Bedare",
+        "Nandan J. Katamble"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18707165",
+      "openalex_url": "https://openalex.org/W7130699097",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Entrepreneurship and Ecosystem Development: Empirical Evidence from Emerging Business Environments in Belagavi”展开，主题涉及Entrepreneurship、Business、Government (linguistics)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Entrepreneurship",
+        "Business",
+        "Government (linguistics)",
+        "Mentorship",
+        "Outreach"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Network and Social Computing: Catalyzing Digital Awareness, Financial Inclusion and Socio-Economic Transformation in India",
+      "authors": [
+        "Sunanda Hegale"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18707578",
+      "openalex_url": "https://openalex.org/W7130690213",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Network and Social Computing: Catalyzing Digital Awareness, Financial Inclusion and Socio-Economic Transformation in India”展开，主题涉及Financial inclusion、Digital transformation、Government (linguistics)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Financial inclusion",
+        "Digital transformation",
+        "Government (linguistics)",
+        "Digital government",
+        "Business"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Postmodern Challenges and Transformation in Agriculture and Industry: A Pathway Towards Viksit Bharat @2047",
+      "authors": [
+        "Lalita S Chavadi"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18738030",
+      "openalex_url": "https://openalex.org/W7131093737",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Postmodern Challenges and Transformation in Agriculture and Industry: A Pathway Towards Viksit Bharat @2047”展开，主题涉及Postmodernism、Agriculture、Sustainability。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Postmodernism",
+        "Agriculture",
+        "Sustainability",
+        "Productivity",
+        "Economic system"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Empowering the Informal Sector: The Impact of Formalization through Digital Payments and Registrations",
+      "authors": [
+        "Shashidar Chikkamath"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18739545",
+      "openalex_url": "https://openalex.org/W7131096589",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Empowering the Informal Sector: The Impact of Formalization through Digital Payments and Registrations”展开，主题涉及Payment、Business、Financial inclusion。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Payment",
+        "Business",
+        "Financial inclusion",
+        "Revenue",
+        "Informal sector"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Cor And ICOR of Agriculture Sector in Postmodern India",
+      "authors": [
+        "DILIPA D. P"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18738061",
+      "openalex_url": "https://openalex.org/W7131085616",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Cor And ICOR of Agriculture Sector in Postmodern India”展开，主题涉及Agriculture、Capital (architecture)、Economics。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Agriculture",
+        "Capital (architecture)",
+        "Economics",
+        "Capital intensity",
+        "Volatility (finance)"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "GST 2.0 Reforms in India: Strengthening E-Invoicing and Real-Time Compliance in a Digital Tax Ecosystem",
+      "authors": [
+        "Bhimanagouda L. Rayanagoudra"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18738187",
+      "openalex_url": "https://openalex.org/W7131178581",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“GST 2.0 Reforms in India: Strengthening E-Invoicing and Real-Time Compliance in a Digital Tax Ecosystem”展开，主题涉及Taxpayer、Transparency (behavior)、Business。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Taxpayer",
+        "Transparency (behavior)",
+        "Business",
+        "Revenue",
+        "Government (linguistics)"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world",
+      "authors": [
+        "Maltesh Prakash Aralikatti",
+        "Honnappa S"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18677260",
+      "openalex_url": "https://openalex.org/W7130423500",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world”展开，主题涉及Plastic waste、Plastic pollution、Consumption (sociology)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Plastic waste",
+        "Plastic pollution",
+        "Consumption (sociology)",
+        "Per capita",
+        "Natural resource economics"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Instant Gratification and the Growth of Buy Now, Pay Later (BNPL) Systems",
+      "authors": [
+        "Pallavi .S. Pawar"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18738579",
+      "openalex_url": "https://openalex.org/W7131129931",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Instant Gratification and the Growth of Buy Now, Pay Later (BNPL) Systems”展开，主题涉及Gratification、Instant、Business。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Gratification",
+        "Instant",
+        "Business",
+        "Payment",
+        "Marketing"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Make in India: Paving Towards Making India Global Manufacturing Hub.",
+      "authors": [
+        "Roopali C Kale"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18679367",
+      "openalex_url": "https://openalex.org/W7130336621",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Make in India: Paving Towards Making India Global Manufacturing Hub.”展开，主题涉及Incentive、Government (linguistics)、Position (finance)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Incentive",
+        "Government (linguistics)",
+        "Position (finance)",
+        "Foreign direct investment",
+        "Business"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Investor Trust and Perception Gaps in the Make in India Initiative: A Behavioural–Neuromarketing Analysis Using the PACADI Decision Framework",
+      "authors": [
+        "Snehal Sugandhi",
+        "Pralhad Rathod"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18679691",
+      "openalex_url": "https://openalex.org/W7130383484",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Investor Trust and Perception Gaps in the Make in India Initiative: A Behavioural–Neuromarketing Analysis Using the PACADI Decision Framework”展开，主题涉及Incentive、Business、Construct (python library)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Incentive",
+        "Business",
+        "Construct (python library)",
+        "Perception",
+        "Valuation (finance)"
+      ],
+      "source": "openalex"
+    }
+  ]
+}
