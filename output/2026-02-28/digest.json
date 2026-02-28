@@ -175,6 +175,27 @@
       "source": "openalex"
     },
     {
+      "title": "Make in India: Paving Towards Making India Global Manufacturing Hub.",
+      "authors": [
+        "Roopali C Kale"
+      ],
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "published_date": "2026-02-28",
+      "doi_url": "https://doi.org/10.5281/zenodo.18679367",
+      "openalex_url": "https://openalex.org/W7130336621",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "这篇论文围绕“Make in India: Paving Towards Making India Global Manufacturing Hub.”展开，主题涉及Incentive、Government (linguistics)、Position (finance)。可进一步阅读全文获取研究方法与结论。",
+      "topics": [
+        "Incentive",
+        "Government (linguistics)",
+        "Position (finance)",
+        "Foreign direct investment",
+        "Business"
+      ],
+      "source": "openalex"
+    },
+    {
       "title": "An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world",
       "authors": [
         "Maltesh Prakash Aralikatti",
@@ -214,27 +235,6 @@
         "Business",
         "Payment",
         "Marketing"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "Make in India: Paving Towards Making India Global Manufacturing Hub.",
-      "authors": [
-        "Roopali C Kale"
-      ],
-      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
-      "published_date": "2026-02-28",
-      "doi_url": "https://doi.org/10.5281/zenodo.18679367",
-      "openalex_url": "https://openalex.org/W7130336621",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“Make in India: Paving Towards Making India Global Manufacturing Hub.”展开，主题涉及Incentive、Government (linguistics)、Position (finance)。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Incentive",
-        "Government (linguistics)",
-        "Position (finance)",
-        "Foreign direct investment",
-        "Business"
       ],
       "source": "openalex"
     },

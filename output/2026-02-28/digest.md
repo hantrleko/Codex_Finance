@@ -90,7 +90,18 @@
 
 **中文摘要（自动生成）**：这篇论文围绕“GST 2.0 Reforms in India: Strengthening E-Invoicing and Real-Time Compliance in a Digital Tax Ecosystem”展开，主题涉及Taxpayer、Transparency (behavior)、Business。可进一步阅读全文获取研究方法与结论。
 
-## 9. An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world
+## 9. Make in India: Paving Towards Making India Global Manufacturing Hub.
+- 来源：openalex
+- 作者：Roopali C Kale
+- 期刊/来源：Zenodo (CERN European Organization for Nuclear Research)
+- 发表日期：2026-02-28
+- 引用数：0
+- 主题：Incentive, Government (linguistics), Position (finance), Foreign direct investment, Business
+- 链接：[DOI](https://doi.org/10.5281/zenodo.18679367) [链接](https://openalex.org/W7130336621)
+
+**中文摘要（自动生成）**：这篇论文围绕“Make in India: Paving Towards Making India Global Manufacturing Hub.”展开，主题涉及Incentive、Government (linguistics)、Position (finance)。可进一步阅读全文获取研究方法与结论。
+
+## 10. An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world
 - 来源：openalex
 - 作者：Maltesh Prakash Aralikatti, Honnappa S
 - 期刊/来源：Zenodo (CERN European Organization for Nuclear Research)
@@ -101,7 +112,7 @@
 
 **中文摘要（自动生成）**：这篇论文围绕“An overview a sanitation aspect: An analysis of the plastic waste generation in India and the world”展开，主题涉及Plastic waste、Plastic pollution、Consumption (sociology)。可进一步阅读全文获取研究方法与结论。
 
-## 10. Instant Gratification and the Growth of Buy Now, Pay Later (BNPL) Systems
+## 11. Instant Gratification and the Growth of Buy Now, Pay Later (BNPL) Systems
 - 来源：openalex
 - 作者：Pallavi .S. Pawar
 - 期刊/来源：Zenodo (CERN European Organization for Nuclear Research)
@@ -111,17 +122,6 @@
 - 链接：[DOI](https://doi.org/10.5281/zenodo.18738579) [链接](https://openalex.org/W7131129931)
 
 **中文摘要（自动生成）**：这篇论文围绕“Instant Gratification and the Growth of Buy Now, Pay Later (BNPL) Systems”展开，主题涉及Gratification、Instant、Business。可进一步阅读全文获取研究方法与结论。
-
-## 11. Make in India: Paving Towards Making India Global Manufacturing Hub.
-- 来源：openalex
-- 作者：Roopali C Kale
-- 期刊/来源：Zenodo (CERN European Organization for Nuclear Research)
-- 发表日期：2026-02-28
-- 引用数：0
-- 主题：Incentive, Government (linguistics), Position (finance), Foreign direct investment, Business
-- 链接：[DOI](https://doi.org/10.5281/zenodo.18679367) [链接](https://openalex.org/W7130336621)
-
-**中文摘要（自动生成）**：这篇论文围绕“Make in India: Paving Towards Making India Global Manufacturing Hub.”展开，主题涉及Incentive、Government (linguistics)、Position (finance)。可进一步阅读全文获取研究方法与结论。
 
 ## 12. Investor Trust and Perception Gaps in the Make in India Initiative: A Behavioural–Neuromarketing Analysis Using the PACADI Decision Framework
 - 来源：openalex
