@@ -211,15 +211,26 @@ def fetch_openalex_papers(date_from: dt.date, date_to: dt.date, per_page: int = 
     papers: list[Paper] = []
     for item in data:
         doi = item.get("doi") or ""
+        primary_location = item.get("primary_location") or {}
+        if not isinstance(primary_location, dict):
+            primary_location = {}
+        source = primary_location.get("source") or {}
+        if not isinstance(source, dict):
+            source = {}
+
+        authorships = item.get("authorships") or []
+        if not isinstance(authorships, list):
+            authorships = []
+
         papers.append(
             Paper(
                 title=item.get("title") or "Untitled",
                 authors=[
                     a.get("author", {}).get("display_name", "")
-                    for a in item.get("authorships", [])[:5]
-                    if a.get("author", {}).get("display_name")
+                    for a in authorships[:5]
+                    if isinstance(a, dict) and a.get("author", {}).get("display_name")
                 ],
-                venue=item.get("primary_location", {}).get("source", {}).get("display_name") or "Unknown",
+                venue=source.get("display_name") or "Unknown",
                 published_date=item.get("publication_date") or "",
                 doi_url=doi if doi.startswith("http") else (f"https://doi.org/{doi}" if doi else ""),
                 openalex_url=item.get("id", ""),

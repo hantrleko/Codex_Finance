@@ -65,3 +65,39 @@ def test_keep_latest_when_empty(monkeypatch, tmp_path: Path):
     assert result["latest_updated"] is False
     assert (latest / "digest.md").read_text(encoding="utf-8") == "old"
     assert (out / "alerts" / "2024-01-03.json").exists()
+
+
+def test_fetch_openalex_handles_null_primary_location(monkeypatch):
+    from src import digest as d
+
+    class DummyResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):
+            return False
+
+        def read(self):
+            payload = {
+                "results": [
+                    {
+                        "title": "Test Paper",
+                        "authorships": [{"author": {"display_name": "Alice"}}],
+                        "primary_location": None,
+                        "publication_date": "2026-01-01",
+                        "doi": "10.1000/test",
+                        "id": "https://openalex.org/W1",
+                        "cited_by_count": 5,
+                        "abstract_inverted_index": None,
+                        "concepts": [],
+                    }
+                ]
+            }
+            return json.dumps(payload).encode("utf-8")
+
+    monkeypatch.setattr(d, "urlopen", lambda *args, **kwargs: DummyResponse())
+    papers = d.fetch_openalex_papers(dt.date(2026, 1, 1), dt.date(2026, 1, 1))
+
+    assert len(papers) == 1
+    assert papers[0].venue == "Unknown"
+    assert papers[0].authors == ["Alice"]
