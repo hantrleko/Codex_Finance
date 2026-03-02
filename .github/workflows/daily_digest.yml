@@ -25,6 +25,7 @@ jobs:
       - name: Generate digest
         run: python src/digest.py
 
+<<<<<<< codex/create-daily-financial-literature-digest-b2irml
       - name: Send digest email (SMTP)
         if: ${{ secrets.SMTP_HOST != '' && secrets.SMTP_USER != '' && secrets.SMTP_PASS != '' }}
         env:
@@ -70,6 +71,8 @@ jobs:
           print(f"Sent digest email to {mail_to}")
           PY
 
+=======
+>>>>>>> main
       - name: Commit generated digest
         run: |
           git config user.name "github-actions[bot]"
