@@ -25,6 +25,54 @@ jobs:
       - name: Generate digest
         run: python src/digest.py
 
+<<<<<<< codex/create-daily-financial-literature-digest-b2irml
+      - name: Send digest email (SMTP)
+        if: ${{ secrets.SMTP_HOST != '' && secrets.SMTP_USER != '' && secrets.SMTP_PASS != '' }}
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: yuchenhan2023@gmail.com
+        run: |
+          python - <<'PY'
+          import os
+          import ssl
+          import smtplib
+          from email.message import EmailMessage
+          from pathlib import Path
+
+          smtp_host = os.environ["SMTP_HOST"]
+          smtp_port = int(os.environ.get("SMTP_PORT", "587"))
+          smtp_user = os.environ["SMTP_USER"]
+          smtp_pass = os.environ["SMTP_PASS"]
+          mail_to = os.environ["MAIL_TO"]
+
+          md_path = Path("output/latest/digest.md")
+          html_path = Path("output/latest/index.html")
+
+          md_body = md_path.read_text(encoding="utf-8") if md_path.exists() else "Digest markdown not found."
+          html_body = html_path.read_text(encoding="utf-8") if html_path.exists() else ""
+
+          msg = EmailMessage()
+          msg["Subject"] = "Finance & Economics Daily Digest"
+          msg["From"] = smtp_user
+          msg["To"] = mail_to
+          msg.set_content(md_body)
+          if html_body:
+              msg.add_alternative(html_body, subtype="html")
+
+          context = ssl.create_default_context()
+          with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
+              server.starttls(context=context)
+              server.login(smtp_user, smtp_pass)
+              server.send_message(msg)
+
+          print(f"Sent digest email to {mail_to}")
+          PY
+
+=======
+>>>>>>> main
       - name: Commit generated digest
         run: |
           git config user.name "github-actions[bot]"

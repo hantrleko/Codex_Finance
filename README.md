@@ -40,3 +40,16 @@ python src/digest.py
 - `LLM_TIMEOUT_SECONDS`：默认 30
 
 > 若未配置 LLM 变量，系统会自动退回规则化摘要。
+
+
+### 邮件推送（方案A：SMTP）
+
+工作流会在日报生成后尝试发送邮件到 `yuchenhan2023@gmail.com`。
+请在 GitHub 仓库 **Settings -> Secrets and variables -> Actions** 配置：
+
+- `SMTP_HOST`
+- `SMTP_PORT`（可选，默认 587）
+- `SMTP_USER`
+- `SMTP_PASS`
+
+> 若未配置上述 SMTP Secrets，邮件步骤会自动跳过，不影响日报文件生成。

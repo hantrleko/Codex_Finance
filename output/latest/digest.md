@@ -1,3 +1,8 @@
+<<<<<<< codex/create-daily-financial-literature-digest-b2irml
+# 金融经济学每日文献速递（2026-02-27）
+
+共筛选到 **0** 篇文献。
+=======
 # 金融经济学每日文献速递（2026-03-02）
 
 共筛选到 **12** 篇文献。
@@ -133,3 +138,4 @@
 - 链接：[DOI](https://doi.org/10.1503/cmaj.251894) [链接](https://openalex.org/W7132830143)
 
 **中文摘要（自动生成）**：这篇论文围绕“Help-seeking for gambling problems following expansion of Ontario’s online gambling market and legalization of single-event sports betting”展开，主题涉及Legalization、Advertising、Business。可进一步阅读全文获取研究方法与结论。
+>>>>>>> main

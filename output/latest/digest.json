@@ -1,4 +1,11 @@
 {
+<<<<<<< codex/create-daily-financial-literature-digest-b2irml
+  "date": "2026-02-27",
+  "count": 0,
+  "source_used": "none",
+  "latest_updated": true,
+  "papers": []
+=======
   "date": "2026-03-02",
   "count": 12,
   "source_used": "openalex",
@@ -272,4 +279,5 @@
       "source": "openalex"
     }
   ]
+>>>>>>> main
 }
