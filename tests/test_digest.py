@@ -13,7 +13,8 @@ def test_extract_abstract_rebuilds_word_order():
 def test_simple_summary_contains_title():
     text = _simple_zh_summary("Asset Pricing", "This paper studies risk premiums.", ["Economics", "Finance"])
     assert "Asset Pricing" in text
-    assert "Finance" in text
+    assert "内容概述" in text
+    assert "方法线索" in text
 
 
 def test_build_digest_writes_files(monkeypatch, tmp_path: Path):
@@ -101,3 +102,121 @@ def test_fetch_openalex_handles_null_primary_location(monkeypatch):
     assert len(papers) == 1
     assert papers[0].venue == "Unknown"
     assert papers[0].authors == ["Alice"]
+
+
+def test_dedupe_and_relevance_filter_removes_noise():
+    from src.digest import _dedupe_and_filter
+
+    papers = [
+        Paper(
+            title="SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading",
+            authors=["A"],
+            venue="Zenodo",
+            published_date="2026-03-05",
+            doi_url="",
+            openalex_url="https://openalex.org/W1",
+            cited_by_count=0,
+            abstract="A framework for financial market risk monitoring.",
+            summary_zh="",
+            topics=["Algorithmic trading", "Financial market"],
+            source="openalex",
+        ),
+        Paper(
+            title="SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading",
+            authors=["A"],
+            venue="Zenodo",
+            published_date="2026-03-05",
+            doi_url="",
+            openalex_url="https://openalex.org/W2",
+            cited_by_count=0,
+            abstract="Duplicate title should be removed.",
+            summary_zh="",
+            topics=["Algorithmic trading", "Financial market"],
+            source="openalex",
+        ),
+        Paper(
+            title="Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]",
+            authors=["Spam"],
+            venue="Unknown",
+            published_date="2026-03-05",
+            doi_url="",
+            openalex_url="https://openalex.org/W3",
+            cited_by_count=0,
+            abstract="",
+            summary_zh="",
+            topics=["Economics"],
+            source="openalex",
+        ),
+    ]
+
+    filtered = _dedupe_and_filter(
+        papers,
+        topic_whitelist={"financial", "market", "trading", "economics"},
+        topic_blacklist={"free dice", "monopoly go"},
+        min_quality_score=2,
+    )
+    assert len(filtered) == 1
+    assert "SENTINEL" in filtered[0].title
+
+
+def test_relevance_filter_drops_irrelevant_openalex_paper(monkeypatch, tmp_path: Path):
+    from src import digest as d
+
+    noisy = Paper(
+        title="The Groundskeeper's Treatise: A Diagnostic Reading of Platform Stewardship Theory",
+        authors=["L"],
+        venue="Zenodo",
+        published_date="2026-03-05",
+        doi_url="",
+        openalex_url="https://openalex.org/W9",
+        cited_by_count=0,
+        abstract="Discussion of semantic reading process.",
+        summary_zh="",
+        topics=["Reading (process)", "Semantic theory of truth"],
+        source="openalex",
+    )
+
+    monkeypatch.setattr(d, "fetch_openalex_papers", lambda *_args, **_kwargs: [noisy])
+    monkeypatch.setattr(d, "fetch_arxiv_finance_econ_papers", lambda *_args, **_kwargs: [])
+
+    cfg = DigestConfig(output_dir=tmp_path / "out")
+    result = build_digest(cfg, llm_cfg=LLMConfig(), run_date=dt.date(2026, 3, 5))
+
+    assert result["count"] == 0
+
+
+def test_relevance_filter_respects_custom_whitelist_threshold(monkeypatch, tmp_path: Path):
+    from src import digest as d
+
+    candidate = Paper(
+        title="Credit risk pricing in banking markets",
+        authors=["A"],
+        venue="Journal",
+        published_date="2026-03-05",
+        doi_url="",
+        openalex_url="https://openalex.org/W10",
+        cited_by_count=0,
+        abstract="We run panel regression models to estimate default risk.",
+        summary_zh="",
+        topics=["Risk", "Banking"],
+        source="openalex",
+    )
+
+    monkeypatch.setattr(d, "fetch_openalex_papers", lambda *_args, **_kwargs: [candidate])
+    monkeypatch.setattr(d, "fetch_arxiv_finance_econ_papers", lambda *_args, **_kwargs: [])
+
+    strict_cfg = DigestConfig(
+        output_dir=tmp_path / "strict",
+        topic_whitelist={"credit"},
+        min_quality_score=4,
+    )
+    strict_result = build_digest(strict_cfg, llm_cfg=LLMConfig(), run_date=dt.date(2026, 3, 5))
+    assert strict_result["count"] == 0
+
+    relaxed_cfg = DigestConfig(
+        output_dir=tmp_path / "relaxed",
+        topic_whitelist={"credit", "risk", "banking"},
+        min_quality_score=3,
+    )
+    relaxed_result = build_digest(relaxed_cfg, llm_cfg=LLMConfig(), run_date=dt.date(2026, 3, 5))
+    assert relaxed_result["count"] == 1

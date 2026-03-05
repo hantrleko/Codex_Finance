@@ -10,6 +10,7 @@
   - 默认规则化中文摘要。
   - 可选接入 OpenAI 兼容接口（`/chat/completions`）生成中文摘要。
 - 质量闸门：当日抓取为 0 且历史 `latest` 有有效内容时，**不覆盖 latest**。
+- 质量筛选：支持可配置主题白名单/黑名单 + 最低质量分，自动去重并剔除噪声条目。
 - 告警落盘：空结果时写入 `output/alerts/YYYY-MM-DD.json`。
 - 自动化：GitHub Actions 每天定时运行并提交 `output/` 结果。
 
@@ -31,6 +32,9 @@ python src/digest.py
 - `DIGEST_MIN_CITATIONS`：最小引用门槛（默认 0）
 - `DIGEST_OUTPUT_DIR`：输出目录（默认 `output`）
 - `DIGEST_KEEP_LATEST_WHEN_EMPTY`：空结果是否保留 latest（`1`/`0`，默认 `1`）
+- `DIGEST_TOPIC_WHITELIST`：相关主题关键词白名单（逗号分隔，默认内置 finance/econ 词表）
+- `DIGEST_TOPIC_BLACKLIST`：噪声关键词黑名单（逗号分隔，默认内置 spam 词表）
+- `DIGEST_MIN_QUALITY_SCORE`：最低质量分（默认 2，分数越高越严格）
 
 ### 可选 LLM 摘要配置
 
