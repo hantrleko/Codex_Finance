@@ -25,9 +25,7 @@ jobs:
       - name: Generate digest
         run: python src/digest.py
 
-<<<<<<< codex/create-daily-financial-literature-digest-b2irml
       - name: Send digest email (SMTP)
-        if: ${{ secrets.SMTP_HOST != '' && secrets.SMTP_USER != '' && secrets.SMTP_PASS != '' }}
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -42,15 +40,18 @@ jobs:
           from email.message import EmailMessage
           from pathlib import Path
 
-          smtp_host = os.environ["SMTP_HOST"]
-          smtp_port = int(os.environ.get("SMTP_PORT", "587"))
-          smtp_user = os.environ["SMTP_USER"]
-          smtp_pass = os.environ["SMTP_PASS"]
-          mail_to = os.environ["MAIL_TO"]
+          smtp_host = os.getenv("SMTP_HOST", "")
+          smtp_user = os.getenv("SMTP_USER", "")
+          smtp_pass = os.getenv("SMTP_PASS", "")
+          smtp_port = int(os.getenv("SMTP_PORT", "587"))
+          mail_to = os.getenv("MAIL_TO", "")
+
+          if not (smtp_host and smtp_user and smtp_pass and mail_to):
+              print("SMTP secrets not fully configured, skip sending email.")
+              raise SystemExit(0)
 
           md_path = Path("output/latest/digest.md")
           html_path = Path("output/latest/index.html")
-
           md_body = md_path.read_text(encoding="utf-8") if md_path.exists() else "Digest markdown not found."
           html_body = html_path.read_text(encoding="utf-8") if html_path.exists() else ""
 
@@ -71,8 +72,6 @@ jobs:
           print(f"Sent digest email to {mail_to}")
           PY
 
-=======
->>>>>>> main
       - name: Commit generated digest
         run: |
           git config user.name "github-actions[bot]"
