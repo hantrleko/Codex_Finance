@@ -5,6 +5,7 @@ import datetime as dt
 import html
 import json
 import os
+import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
@@ -37,6 +38,9 @@ class DigestConfig:
     min_citations: int = 0
     output_dir: Path = Path("output")
     keep_latest_when_empty: bool = True
+    topic_whitelist: set[str] = dataclasses.field(default_factory=lambda: set(FINANCE_KEYWORDS))
+    topic_blacklist: set[str] = dataclasses.field(default_factory=lambda: set(SPAM_TERMS))
+    min_quality_score: int = 2
 
 
 @dataclasses.dataclass
@@ -49,6 +53,98 @@ class LLMConfig:
     @property
     def enabled(self) -> bool:
         return bool(self.api_base and self.api_key and self.model)
+
+
+FINANCE_KEYWORDS = {
+    "finance",
+    "financial",
+    "asset",
+    "bank",
+    "banking",
+    "stock",
+    "bond",
+    "portfolio",
+    "investment",
+    "pricing",
+    "risk",
+    "credit",
+    "macro",
+    "economics",
+    "economic",
+    "econometric",
+    "market",
+    "monetary",
+    "inflation",
+    "fiscal",
+    "trade",
+    "household",
+    "firm",
+    "labor",
+    "employment",
+    "inequality",
+}
+
+SPAM_TERMS = {
+    "free dice",
+    "monopoly go",
+    "video",
+    "enlace",
+    "miss pacman",
+    "telegram",
+    "casino",
+    "betting",
+    "gift code",
+    "daily rewards",
+}
+
+
+def _normalize_title(text: str) -> str:
+    return re.sub(r"\W+", "", text).lower()
+
+
+def _quality_score(paper: Paper, topic_whitelist: set[str]) -> int:
+    text = " ".join([paper.title, paper.abstract, paper.venue, " ".join(paper.topics)]).lower()
+    title_text = paper.title.lower()
+    topic_text = " ".join(paper.topics).lower()
+    score = 0
+    for keyword in topic_whitelist:
+        if keyword in title_text:
+            score += 3
+        elif keyword in topic_text:
+            score += 2
+        elif keyword in text:
+            score += 1
+    return score
+
+
+def _is_relevant_openalex_paper(paper: Paper, topic_whitelist: set[str], topic_blacklist: set[str], min_quality_score: int) -> bool:
+    text = " ".join([paper.title, paper.abstract, paper.venue, " ".join(paper.topics)]).lower()
+    if any(term in text for term in topic_blacklist):
+        return False
+    return _quality_score(paper, topic_whitelist) >= min_quality_score
+
+
+def _dedupe_and_filter(
+    papers: list[Paper], topic_whitelist: set[str], topic_blacklist: set[str], min_quality_score: int
+) -> list[Paper]:
+    unique: list[Paper] = []
+    seen_titles: set[str] = set()
+
+    for paper in papers:
+        normalized = _normalize_title(paper.title)
+        if normalized and normalized in seen_titles:
+            continue
+        if paper.source == "openalex" and not _is_relevant_openalex_paper(
+            paper,
+            topic_whitelist=topic_whitelist,
+            topic_blacklist=topic_blacklist,
+            min_quality_score=min_quality_score,
+        ):
+            continue
+        if normalized:
+            seen_titles.add(normalized)
+        unique.append(paper)
+    return unique
 
 
 def _extract_abstract(indexed_abstract: dict[str, Any] | None) -> str:
@@ -74,14 +170,36 @@ def _topic_names(concepts: list[dict[str, Any]]) -> list[str]:
 
 
 def _simple_zh_summary(title: str, abstract: str, topics: list[str]) -> str:
-    short_abs = abstract.strip().replace("\n", " ")
-    if len(short_abs) > 180:
-        short_abs = short_abs[:177] + "..."
-
     topic_text = "、".join(topics[:3]) if topics else "金融经济学"
-    if short_abs:
-        return f"这篇论文围绕“{title}”展开，主题涉及{topic_text}。核心内容：{short_abs}"
-    return f"这篇论文围绕“{title}”展开，主题涉及{topic_text}。可进一步阅读全文获取研究方法与结论。"
+    clean_abs = re.sub(r"\s+", " ", abstract.strip())
+    if not clean_abs:
+        return f"研究主题：{title}（{topic_text}）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。"
+
+    sentences = [s.strip(" .;") for s in re.split(r"(?<=[.!?])\s+", clean_abs) if s.strip()]
+    core_sentence = sentences[0] if sentences else clean_abs
+    method_signals = {
+        "regression": "回归分析",
+        "difference-in-differences": "双重差分",
+        "did": "双重差分",
+        "panel": "面板数据",
+        "event study": "事件研究",
+        "structural": "结构模型",
+        "survey": "调查数据",
+        "experiment": "实验方法",
+        "machine learning": "机器学习",
+    }
+    abstract_lower = clean_abs.lower()
+    methods = [zh for key, zh in method_signals.items() if key in abstract_lower]
+    method_text = "、".join(dict.fromkeys(methods)) if methods else "文中摘要未明确披露具体识别策略"
+
+    if len(core_sentence) > 180:
+        core_sentence = core_sentence[:177] + "..."
+
+    return (
+        f"研究主题：{title}（{topic_text}）。"
+        f"内容概述：{core_sentence}。"
+        f"方法线索：{method_text}；应用上可用于相关政策评估、市场监测或资产定价分析。"
+    )
 
 
 def _llm_zh_summary(title: str, abstract: str, topics: list[str], cfg: LLMConfig) -> str:
@@ -308,7 +426,13 @@ def build_digest(config: DigestConfig, llm_cfg: LLMConfig, run_date: dt.date | N
     source_used = "openalex" if primary else ("arxiv-fallback" if fallback else "none")
 
     papers = (primary or fallback)
-    papers = [p for p in papers if p.source == "arxiv" or p.cited_by_count >= config.min_citations][: config.max_papers]
+    papers = [p for p in papers if p.source == "arxiv" or p.cited_by_count >= config.min_citations]
+    papers = _dedupe_and_filter(
+        papers,
+        topic_whitelist=config.topic_whitelist,
+        topic_blacklist=config.topic_blacklist,
+        min_quality_score=config.min_quality_score,
+    )[: config.max_papers]
     papers = _apply_summaries(papers, llm_cfg)
 
     config.output_dir.mkdir(parents=True, exist_ok=True)
@@ -367,11 +491,21 @@ def build_digest(config: DigestConfig, llm_cfg: LLMConfig, run_date: dt.date | N
 
 
 def main() -> None:
+    whitelist = {
+        x.strip().lower() for x in os.getenv("DIGEST_TOPIC_WHITELIST", "").split(",") if x.strip()
+    } or set(FINANCE_KEYWORDS)
+    blacklist = {
+        x.strip().lower() for x in os.getenv("DIGEST_TOPIC_BLACKLIST", "").split(",") if x.strip()
+    } or set(SPAM_TERMS)
+
     config = DigestConfig(
         max_papers=int(os.getenv("DIGEST_MAX_PAPERS", "12")),
         min_citations=int(os.getenv("DIGEST_MIN_CITATIONS", "0")),
         output_dir=Path(os.getenv("DIGEST_OUTPUT_DIR", "output")),
         keep_latest_when_empty=os.getenv("DIGEST_KEEP_LATEST_WHEN_EMPTY", "1") == "1",
+        topic_whitelist=whitelist,
+        topic_blacklist=blacklist,
+        min_quality_score=int(os.getenv("DIGEST_MIN_QUALITY_SCORE", "2")),
     )
     llm_cfg = LLMConfig(
         api_base=os.getenv("LLM_API_BASE", ""),
