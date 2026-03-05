@@ -1,6 +1,6 @@
 {
   "date": "2026-03-05",
-  "count": 12,
+  "count": 9,
   "source_used": "openalex",
   "latest_updated": true,
   "papers": [
@@ -15,34 +15,13 @@
       "openalex_url": "https://openalex.org/W7126779460",
       "cited_by_count": 0,
       "abstract": "",
-      "summary_zh": "这篇论文围绕“Disentangling multidimensional welfare-to-work policy programmes”展开，主题涉及Process (computing)、Corporate governance、Unemployment。可进一步阅读全文获取研究方法与结论。",
+      "summary_zh": "研究主题：Disentangling multidimensional welfare-to-work policy programmes（Process (computing)、Corporate governance、Unemployment）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
       "topics": [
         "Process (computing)",
         "Corporate governance",
         "Unemployment",
         "Service (business)",
         "Public relations"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "The Groundskeeper's Treatise: A Diagnostic Reading of Platform Stewardship Theory through the Semantic Economy",
-      "authors": [
-        "Lee Sharks"
-      ],
-      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.5281/zenodo.18869164",
-      "openalex_url": "https://openalex.org/W7133554469",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“The Groundskeeper's Treatise: A Diagnostic Reading of Platform Stewardship Theory through the Semantic Economy”展开，主题涉及Stewardship (theology)、Counterfactual thinking、Reading (process)。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Stewardship (theology)",
-        "Counterfactual thinking",
-        "Reading (process)",
-        "Semantic theory of truth",
-        "Computer science"
       ],
       "source": "openalex"
     },
@@ -57,7 +36,7 @@
       "openalex_url": "https://openalex.org/W7133160484",
       "cited_by_count": 0,
       "abstract": "",
-      "summary_zh": "这篇论文围绕“L'application des sanctions de l'exception d'inexécution et de la réduction du prix au contrat de bail à la suite de la réforme du droit des contrats”展开，主题涉及Political science、Sanctions、Business。可进一步阅读全文获取研究方法与结论。",
+      "summary_zh": "研究主题：L'application des sanctions de l'exception d'inexécution et de la réduction du prix au contrat de bail à la suite de la réforme du droit des contrats（Political science、Sanctions、Business）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
       "topics": [
         "Political science",
         "Sanctions",
@@ -78,101 +57,13 @@
       "openalex_url": "https://openalex.org/W7133566808",
       "cited_by_count": 0,
       "abstract": "",
-      "summary_zh": "这篇论文围绕“SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading - An AI Immune System for Global Financial Markets”展开，主题涉及Population、Algorithmic trading、Economics。可进一步阅读全文获取研究方法与结论。",
+      "summary_zh": "研究主题：SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading - An AI Immune System for Global Financial Markets（Population、Algorithmic trading、Economics）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
       "topics": [
         "Population",
         "Algorithmic trading",
         "Economics",
         "Financial market",
         "Computer science"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "Decent work and career development in the green transition: Insights from the solar value chain in Ghana",
-      "authors": [
-        "Paula Edze",
-        "Ulrich Elmer Hansen",
-        "Imoro Braimah",
-        "Francis Kemausuor",
-        "Akosua Baah Kwarteng Amaka-Otchere"
-      ],
-      "venue": "Energy Sustainable Development/Energy for sustainable development",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.1016/j.esd.2026.101980",
-      "openalex_url": "https://openalex.org/W7133495466",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“Decent work and career development in the green transition: Insights from the solar value chain in Ghana”展开，主题涉及Work (physics)、Career development、Value (mathematics)。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Work (physics)",
-        "Career development",
-        "Value (mathematics)",
-        "Chain (unit)",
-        "Business"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "[Enlace De Video] Familia Guirola El Caso De Miss Pacman Guatemala",
-      "authors": [
-        "nehmii nehmii"
-      ],
-      "venue": "Unknown",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.55277/researchhub.zrw8mann",
-      "openalex_url": "https://openalex.org/W7133515744",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“[Enlace De Video] Familia Guirola El Caso De Miss Pacman Guatemala”展开，主题涉及Population、Government (linguistics)、Economics。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Population",
-        "Government (linguistics)",
-        "Economics",
-        "Work (physics)",
-        "Geography"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]",
-      "authors": [
-        "John N. Vaughn"
-      ],
-      "venue": "Unknown",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.55277/researchhub.et62340m",
-      "openalex_url": "https://openalex.org/W7133569747",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Dice",
-        "Monopoly",
-        "Economics",
-        "Mathematical economics",
-        "Action (physics)"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]",
-      "authors": [
-        "John N. Vaughn"
-      ],
-      "venue": "Unknown",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.55277/researchhub.ignwydrp",
-      "openalex_url": "https://openalex.org/W7133534907",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Dice",
-        "Monopoly",
-        "Economics",
-        "Mathematical economics",
-        "Action (physics)"
       ],
       "source": "openalex"
     },
@@ -189,55 +80,13 @@
       "openalex_url": "https://openalex.org/W7133081504",
       "cited_by_count": 0,
       "abstract": "",
-      "summary_zh": "这篇论文围绕“\"L'enseignement supérieur : combien de divisions ?\"”展开，主题涉及Political science、Economics、Law and economics。可进一步阅读全文获取研究方法与结论。",
+      "summary_zh": "研究主题：\"L'enseignement supérieur : combien de divisions ?\"（Political science、Economics、Law and economics）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
       "topics": [
         "Political science",
         "Economics",
         "Law and economics",
         "Economy",
         "Order (exchange)"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading - An AI Immune System for Global Financial Markets",
-      "authors": [
-        "Hari Vignesh BALAJI"
-      ],
-      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.5281/zenodo.18868592",
-      "openalex_url": "https://openalex.org/W7133540814",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“SENTINEL: Symbiotic Ecosystem Networks for Transparent, Intelligent, and Ecologically-Locked Trading - An AI Immune System for Global Financial Markets”展开，主题涉及Population、Algorithmic trading、Economics。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Population",
-        "Algorithmic trading",
-        "Economics",
-        "Financial market",
-        "Computer science"
-      ],
-      "source": "openalex"
-    },
-    {
-      "title": "Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [25gfOu]",
-      "authors": [
-        "John N. Vaughn"
-      ],
-      "venue": "Unknown",
-      "published_date": "2026-03-05",
-      "doi_url": "https://doi.org/10.55277/researchhub.21pktw73",
-      "openalex_url": "https://openalex.org/W7133559985",
-      "cited_by_count": 0,
-      "abstract": "",
-      "summary_zh": "这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [25gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。",
-      "topics": [
-        "Dice",
-        "Monopoly",
-        "Economics",
-        "Mathematical economics",
-        "Action (physics)"
       ],
       "source": "openalex"
     },
@@ -252,13 +101,100 @@
       "openalex_url": "https://openalex.org/W7133575640",
       "cited_by_count": 0,
       "abstract": "",
-      "summary_zh": "这篇论文围绕“Quand l'argent sale déstabilise l’économie réelle: Une modélisation théorique des impacts du blanchiment de capitaux au Mali”展开，主题涉及Political science、Business、Context (archaeology)。可进一步阅读全文获取研究方法与结论。",
+      "summary_zh": "研究主题：Quand l'argent sale déstabilise l’économie réelle: Une modélisation théorique des impacts du blanchiment de capitaux au Mali（Political science、Business、Context (archaeology)）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
       "topics": [
         "Political science",
         "Business",
         "Context (archaeology)",
         "Economics",
         "Quality (philosophy)"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Advanced GARCH Modeling Techniques and Risk-Return Relationship in the Vietnamese Stock Market",
+      "authors": [
+        "Francesca Pampurini",
+        "Anna Grazia Quaranta"
+      ],
+      "venue": "Asian Journal of Finance & Accounting",
+      "published_date": "2026-03-05",
+      "doi_url": "https://doi.org/10.5296/ajfa.v18i1.19007",
+      "openalex_url": "https://openalex.org/W7133533354",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "研究主题：Advanced GARCH Modeling Techniques and Risk-Return Relationship in the Vietnamese Stock Market（Vietnamese、Volatility (finance)、Economics）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
+      "topics": [
+        "Vietnamese",
+        "Volatility (finance)",
+        "Economics",
+        "Econometrics",
+        "Stock market"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Opération de paiement initiée par le bénéficiaire : variations autour de la qualification de l'opération et de la preuve du consentement",
+      "authors": [
+        "Laurent Siguoirt"
+      ],
+      "venue": "SPIRE - Sciences Po Institutional REpository",
+      "published_date": "2026-03-05",
+      "doi_url": "",
+      "openalex_url": "https://openalex.org/W7133175395",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "研究主题：Opération de paiement initiée par le bénéficiaire : variations autour de la qualification de l'opération et de la preuve du consentement（Political science、Welfare economics、Business）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
+      "topics": [
+        "Political science",
+        "Welfare economics",
+        "Business",
+        "Sociology",
+        "Control (management)"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "Retraction Note: Structural equation modeling for three aspects of green business practices: a case study of Bangladeshi RMG’s industry",
+      "authors": [
+        "Apurbo Sarkar",
+        "Lu Qian",
+        "Anamika Kor Peau"
+      ],
+      "venue": "Environmental Science and Pollution Research",
+      "published_date": "2026-03-05",
+      "doi_url": "https://doi.org/10.1007/s11356-026-37575-5",
+      "openalex_url": "https://openalex.org/W7133500618",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "研究主题：Retraction Note: Structural equation modeling for three aspects of green business practices: a case study of Bangladeshi RMG’s industry（Structural equation modeling、Business、Engineering）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
+      "topics": [
+        "Structural equation modeling",
+        "Business",
+        "Engineering",
+        "Environmental economics",
+        "Computer science"
+      ],
+      "source": "openalex"
+    },
+    {
+      "title": "How Circular is the Linear Economy? Analysing Circularity, Resource Flows and Their Relation to GDP",
+      "authors": [
+        "Amir Rashid"
+      ],
+      "venue": "Circular Economy",
+      "published_date": "2026-03-05",
+      "doi_url": "https://doi.org/10.55845/joce-2026-4179",
+      "openalex_url": "https://openalex.org/W7133490636",
+      "cited_by_count": 0,
+      "abstract": "",
+      "summary_zh": "研究主题：How Circular is the Linear Economy? Analysing Circularity, Resource Flows and Their Relation to GDP（Circular economy、Reuse、Economics）。当前来源未提供摘要，建议优先查看原文以确认研究设计与关键结论。",
+      "topics": [
+        "Circular economy",
+        "Reuse",
+        "Economics",
+        "Remanufacturing",
+        "Gross domestic product"
       ],
       "source": "openalex"
     }
