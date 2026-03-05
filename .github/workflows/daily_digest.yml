@@ -40,10 +40,11 @@ jobs:
           from email.message import EmailMessage
           from pathlib import Path
 
-          smtp_host = os.getenv("SMTP_HOST", "")
-          smtp_user = os.getenv("SMTP_USER", "")
-          smtp_pass = os.getenv("SMTP_PASS", "")
-          smtp_port = int(os.getenv("SMTP_PORT", "587"))
+          smtp_host = os.getenv("SMTP_HOST", "").strip()
+          smtp_user = os.getenv("SMTP_USER", "").strip()
+          smtp_pass = os.getenv("SMTP_PASS", "").strip()
+          smtp_port_raw = os.getenv("SMTP_PORT", "").strip()
+          smtp_port = int(smtp_port_raw or "587")
           mail_to = os.getenv("MAIL_TO", "")
 
           if not (smtp_host and smtp_user and smtp_pass and mail_to):
