@@ -57,18 +57,7 @@
 
 **中文摘要（自动生成）**：这篇论文围绕“Decent work and career development in the green transition: Insights from the solar value chain in Ghana”展开，主题涉及Work (physics)、Career development、Value (mathematics)。可进一步阅读全文获取研究方法与结论。
 
-## 6. Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]
-- 来源：openalex
-- 作者：John N. Vaughn
-- 期刊/来源：Unknown
-- 发表日期：2026-03-05
-- 引用数：0
-- 主题：Dice, Monopoly, Economics, Mathematical economics, Action (physics)
-- 链接：[DOI](https://doi.org/10.55277/researchhub.ignwydrp) [链接](https://openalex.org/W7133534907)
-
-**中文摘要（自动生成）**：这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。
-
-## 7. [Enlace De Video] Familia Guirola El Caso De Miss Pacman Guatemala
+## 6. [Enlace De Video] Familia Guirola El Caso De Miss Pacman Guatemala
 - 来源：openalex
 - 作者：nehmii nehmii
 - 期刊/来源：Unknown
@@ -79,7 +68,7 @@
 
 **中文摘要（自动生成）**：这篇论文围绕“[Enlace De Video] Familia Guirola El Caso De Miss Pacman Guatemala”展开，主题涉及Population、Government (linguistics)、Economics。可进一步阅读全文获取研究方法与结论。
 
-## 8. Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]
+## 7. Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]
 - 来源：openalex
 - 作者：John N. Vaughn
 - 期刊/来源：Unknown
@@ -89,6 +78,17 @@
 - 链接：[DOI](https://doi.org/10.55277/researchhub.et62340m) [链接](https://openalex.org/W7133569747)
 
 **中文摘要（自动生成）**：这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [23gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。
+
+## 8. Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]
+- 来源：openalex
+- 作者：John N. Vaughn
+- 期刊/来源：Unknown
+- 发表日期：2026-03-05
+- 引用数：0
+- 主题：Dice, Monopoly, Economics, Mathematical economics, Action (physics)
+- 链接：[DOI](https://doi.org/10.55277/researchhub.ignwydrp) [链接](https://openalex.org/W7133534907)
+
+**中文摘要（自动生成）**：这篇论文围绕“Free Dice Links for Monopoly GO – Claim Daily Rewards Instantly [24gfOu]”展开，主题涉及Dice、Monopoly、Economics。可进一步阅读全文获取研究方法与结论。
 
 ## 9. "L'enseignement supérieur : combien de divisions ?"
 - 来源：openalex
